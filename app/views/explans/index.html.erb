@@ -3,7 +3,18 @@
 
 <%= link_to "Add a new explan", new_explan_path %>
 
+<%= form_tag(explans_path, :method => "get", id: "search-form") do %>
+    <%= text_field_tag :search, params[:search], placeholder: "Search Workouts" %>
+    <%= submit_tag "Search", :workout => nil %>
+<% end %>
 
+<ul class>
+<% if @explan.present? %>
+  <%= render @explan %>
+<% else %>
+  <p>There are no explan containing the term(s) <%= params[:search] %>.</p>
+<% end %>
+</ul>
 
 
 
