@@ -1,0 +1,16 @@
+<%= link_to "Add a new exercise", new_exercise_path %>
+
+<ul class="exercises">
+	<% @exercises.each do |exercise| %>
+		
+			<li>
+
+				<%= exercise.name %>
+				<%= exercise.id %>
+				<%= exercise.explan_id %>
+			</li>
+		
+	
+	<% end %>
+</ul>	
+
