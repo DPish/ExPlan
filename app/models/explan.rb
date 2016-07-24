@@ -1,0 +1,2 @@
+class Explan < ApplicationRecord
+end

@@ -1,1 +1,19 @@
-<h1>ExPlan</h1>
+
+
+
+<%= link_to "Add a new explan", new_explan_path %>
+
+
+
+
+
+<ul class="explans">	
+
+	<% @explans.each do |explan| %>	
+		<li><%= explan.workout %></li> 
+	<% end %>
+
+</ul>
+
+
+
