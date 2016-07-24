@@ -1,5 +1,6 @@
 <%= link_to "Add a new explan", new_explan_path %>
 <%= link_to "Add a new exercise", new_exercise_path %>
+<%= link_to "Add a new extask", new_extask_path %>
 
 <%= form_tag(explans_path, :method => "get", id: "search-form") do %>
     <%= text_field_tag :search, params[:search], placeholder: "Search Workouts" %>
@@ -23,6 +24,17 @@
 		 <ul>
               <% explan.exercises.each do |exercise| %>
               <li><%= exercise.name %></li>
+
+               <ul>
+                <% exercise.extasks.each do |ex| %>
+                <li><%= ex.reps %></li>
+                <li><%= ex.pounds %></li>
+                <li><%= ex.sets %></li>
+              
+                <% end %>
+              </ul>
+
+
             <% end %>
           </ul>
 	<% end %>

@@ -1,0 +1,17 @@
+<%= link_to "Add a new explan", new_explan_path %>
+
+<ul class="extasks">
+	<% @extasks.each do |extask| %>
+		
+			<li>
+
+				<%= extask.reps %>
+				<%= extask.pounds %>
+				<%= extask.sets %>				
+				<%= extask.exercise_id %>
+				<%= extask.id %>
+			</li>
+		
+	
+	<% end %>
+</ul>	
