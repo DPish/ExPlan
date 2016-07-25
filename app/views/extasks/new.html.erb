@@ -1,0 +1,11 @@
+<%= form_for @extask do |form| %>
+	<%= form.label :reps %>
+	<%= form.text_field :reps %>
+	<%= form.label :pounds %>
+	<%= form.text_field :pounds %>
+	<%= form.label :sets %>
+	<%= form.text_field :sets %>
+	<%= form.label :exercise_id %>
+	<%= form.text_field :exercise_id %>
+	<%= form.submit "Submit" %>
+<% end %>
